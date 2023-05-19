@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Space Shooter</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
+  <style type="text/css">
+    #mycanvas {
+      -webkit-animation: animatedBackground 20s linear infinite;
+      background-repeat: repeat-y;
+    }
+
+    @-webkit-keyframes animatedBackground {
+      from {
+        background-position: 0 0;
+      }
+
+      to {
+        background-position: 0 1000px;
+      }
+    }
+  </style>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body style="background-color: rgba(231, 230, 230, 0.644);">
+  <div class="container-fluid mt-3 ml-5 mr-5 " id="outer-main">
+
+    <!-- ================== form ========================================= -->
+    <div class="container p-3 mt-3 ml-5 mr-5 pt-1 bg-white">
+      <div class="mt-1" id="complete">
+        <i class="bi bi-trophy" id="trofy"> 0/6 </i>
+        <div class="progress" id="p-bar">
+          <div class="progress-bar progress-bar-striped progress-bar-animated" id="progressing" role="progressbar"
+            aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 0%; left: 0px"></div>
+        </div>
+      </div>
+
+      <div class="container-fluid justify-content-center">
+        <form id="contact-form" class="text-center" onsubmit="showInput(event)" method="post">
+          <div class="row container-fluid p-2 bg-white text-center  justify-content-center" id="contact-info"></div>
+          <!-- =========== submit Button =============== -->
+          <div class="d-flex justify-content-center col-12">
+            <button class="invisible btn btn-success mt-1" id="btn-submit" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <b> Submit </b>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- =============  modal ================= -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+
+          <div class="modal-dialog modal-dialog-centered">
+            <h3> Congratulations !!!</h3>
+          </div>
+
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ====================================== -->
+
+    <!-- ================================================================ -->
+    <div class="d-flex justify-content-center col-12"></div>
+    <!-- ================= canvase for game ============================= -->
+    <div class="mt-1 container text-center w-100 ">
+      <canvas id="mycanvas" width="600" height="300" style="width: 70%"></canvas>
+      <script type="text/javascript" src="shooter.js"></script>
+    </div>
+  </div>
+  <!-- ================================================================= -->
+</body>
+
+</html>

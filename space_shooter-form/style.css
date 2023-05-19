@@ -1,0 +1,30 @@
+	
+#complete {
+	margin-left: 2%;
+	margin-right: 2%;
+	margin-top: 0;
+}
+#cup { 
+	margin-left: 2%;
+	margin-right: 2%;
+	height:5vh;
+}
+
+
+#contact-form {
+	font-size: 14px;
+}
+
+
+.form-control {
+	
+	font-size: 14px;
+}
+.form-floating>.form-control:focus~label, .form-floating>.form-control:not(:placeholder-shown)~label, .form-floating>.form-select~label {
+    opacity: .65;
+    transform: scale(0.80) translateY(-0.5rem) translateX(0.3rem);
+}
+
+.form-floating>label {
+	padding: 8px 0.75rem;
+}
